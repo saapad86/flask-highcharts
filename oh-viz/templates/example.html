@@ -1,0 +1,49 @@
+<!-- all the navigation bar and header content has been moved to base.html -->
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="row">
+  {% for chart in charts %}
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-line-chart fa-fw"></i> {{ chart.title }}
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            Actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">Action</a>
+                            </li>
+                            <li><a href="#">Another action</a>
+                            </li>
+                            <li><a href="#">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- /.panel-heading-->
+            <div class="panel-body">
+              <div id="{{ chart._id }}"></div>
+          </div> <!-- /.panel-body -->
+          <div class="panel-footer">
+              Chart Notes: {{ chart.notes|safe }}
+          </div>
+        </div><!-- /panel -->
+    </div><!-- /col -->
+    {% endfor %}
+  </div><!-- /row-->
+
+  <script>
+  // unpack charts to pass to highcharts
+  var charts = {{ charts|safe }}
+  {% include "js/line_area_chart.js" %}
+  </script>
+{% endblock %}

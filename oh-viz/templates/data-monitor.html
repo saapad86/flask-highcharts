@@ -1,0 +1,67 @@
+all the navigation bar and header content has been moved to base.html -->
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <i class="fa fa-line-chart fa-fw"></i>IAT Catalog
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            Actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">Action</a>
+                            </li>
+                            <li><a href="#">Another action</a>
+                            </li>
+                            <li><a href="#">Something else here</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- /.panel-heading-->
+            <div class="panel-body">
+              <div id="table1" class="display">
+  <table id="example">
+    <thead>
+      <tr><th>Sites</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>Flippa</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+      <tr><td>SitePoint</td></tr>
+      <tr><td>Learnable</td></tr>
+    </tbody>
+  </table>
+              </div>
+          </div> <!-- /.panel-body -->
+          <div class="panel-footer">
+              Notes:
+          </div>
+        </div><!-- /panel -->
+    </div><!-- /col -->
+  </div><!-- /row-->
+{% endblock %}
